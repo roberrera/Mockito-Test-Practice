@@ -51,6 +51,13 @@ public class MainActivityPresenterTest {
   }
 
   @Test public void launchOtherActivityButtonClicked() throws Exception {
+    // Arrange
+    Class clazz = OtherActivity.class;
 
+    // Act
+    presenter.launchOtherActivityButtonClicked(clazz);
+
+    // Assert
+    Mockito.verify(view).launchOtherActivity(clazz);
   }
 }
